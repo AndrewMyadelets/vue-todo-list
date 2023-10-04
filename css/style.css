@@ -1,0 +1,121 @@
+body {
+    background: #e7e7e7;
+}
+
+.container {
+    display: flex;
+    justify-content: center;
+}
+
+.form {
+    width: 500px;
+    padding: 30px;
+    border-radius: 15px;
+    box-shadow: 0 4px 16px #ccc;
+    background: #fff;
+    opacity: 0.8;
+    font-family: sans-serif;
+    letter-spacing: 1px;
+}
+
+.form__input,
+.form__button {
+    font-family: sans-serif;
+    letter-spacing: 1px;
+    font-size: 16px;
+}
+
+.form__title {
+    text-align: center;
+    margin: 0 0 30px 0;
+    font-weight: normal;
+}
+
+.form__group {
+    position: relative;
+    margin-bottom: 30px;
+}
+
+.form__label {
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: -1;
+    color: #a5a5a5;
+    transition: 0.3s;
+}
+
+.form__input {
+    width: 100%;
+    padding: 0 0 10px 0;
+    border: none;
+    border-bottom: 1px solid #e0e0e0;
+    background-color: transparent;
+    outline: none;
+    transition: 0.3s;
+}
+
+.form__input:focus {
+    border-bottom: 1px solid #1a73a8;
+}
+
+.form__button {
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    color: #fff;
+    background-color: #0071f0;
+    outline: none;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.form__button:focus,
+.form__button:hover {
+    background-color: rgba(0, 123, 280, 0.8);
+}
+
+.form__input:focus~.form__label,
+.form__input:not(:placeholder-shown)~.form__label {
+    top: -28px;
+    font-size: 14px;
+    color: #c4c3c3;
+}
+
+hr {
+    margin: 30px 0;
+}
+
+.list {
+    padding: 0;
+}
+
+.list__item {
+    list-style: none;
+    font-size: 17px;
+    padding: 10px 10px 10px 50px;
+    cursor: pointer;
+    position: relative;
+}
+
+.list__item::before {
+    content: "";
+    position: absolute;
+    height: 25px;
+    width: 25px;
+    border-radius: 50%;
+    background-image: url(../images/unchecked.png);
+    background-size: cover;
+    background-position: center;
+    top: 8px;
+    left: 8px;
+}
+
+.list__item.checked {
+    color: #555;
+    text-decoration: line-through;
+}
+
+.list__item.checked::before {
+    background-image: url(../images/checked.png);
+}
