@@ -91,16 +91,20 @@ hr {
 }
 
 .list__item {
+    margin: 5px 0;
+    padding: 10px 0 10px 10px;
     display: flex;
     justify-content: space-between;
     list-style: none;
     font-size: 17px;
     padding: 10px 0 10px 0;
+    background-color: #e7e7e7;
+    border-radius: 10px;
 }
 
 .list__text {
-    padding-top: 3px;
-    padding-left: 35px;
+    padding: 3px 0;
+    padding-left: 40px;
     cursor: pointer;
     position: relative;
 }
@@ -115,34 +119,29 @@ hr {
     background-size: cover;
     background-position: center;
     top: 0;
-    left: 0;
+    left: 5px;
 }
 
-.list__text.checked {
+.list__item.checked {
+    background-color: rgb(188, 235, 188);
+}
+
+.list__item.checked>.list__text {
     color: #555;
     text-decoration: line-through;
 }
 
-.list__text.checked::before {
+.list__item.checked>.list__text::before {
     background-image: url(../images/checked.png);
 }
 
 .list__action {
-    display: block;
-    padding-top: 3px;
-    cursor: pointer;
-    position: relative;  
+    display: flex;
 }
 
-.list__action::after {
-    content: "";
-    position: absolute;
-    height: 25px;
+.list__actions img {
+    margin-right: 5px;
     width: 25px;
-    border-radius: 50%;
-    background-image: url(../images/remove.png);
-    background-size: cover;
-    background-position: center;
-    top: 0;
-    right: 0;
+    height: 25px;
+    cursor: pointer;
 }
